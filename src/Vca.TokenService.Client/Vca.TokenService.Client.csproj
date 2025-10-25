@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- TFM & compiler -->
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>12.0</LangVersion>
+    <AnalysisLevel>latest</AnalysisLevel>
+
+    <!-- NuGet metadata -->
+    <PackageId>Vca.TokenService.Client</PackageId>
+    <Description>A client library for retrieving a bearer token for internal VCA services.</Description>
+    <Authors>VCA Development Team</Authors>
+    <Copyright>© 2021 - $([System.DateTime]::Now.ToString('yyyy')) VCA</Copyright>
+    <!-- <RepositoryUrl>https://vcavsts.visualstudio.com/VCAProduct/_git/lib-dotnet-tokenservice-client</RepositoryUrl> -->
+    <RepositoryUrl>https://github.com/sdoffen/lib-dotnet-tokenservice-client</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://vcavsts.visualstudio.com/VCAProduct/_git/lib-dotnet-tokenservice-client</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <!-- Pack & docs -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Symbols & Source Link -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="[8.0.1,)" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="[8.0.0,)" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="[8.0.0,)" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="[8.0.0,)" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="[8.0.2,)" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="[8.0.0,)" PrivateAssets="All"/>
+    <PackageReference Include="System.Text.Json" Version="[8.0.6,)" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentHttpClient" Version="4.2.3" />
+    <!-- <PackageReference Include="Microsoft.SourceLink.AzureRepos.Git" Version="8.0.0" PrivateAssets="All" /> -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Polly" Version="[8.0.0,)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>
